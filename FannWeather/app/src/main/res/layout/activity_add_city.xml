@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addCity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入城市名"
+        android:gravity="center"
+        android:id="@+id/city_input"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cSpinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:text="无结果"
+        android:id="@+id/noResult"
+        android:visibility="gone"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pSpinner"
+        app:layout_constraintTop_toBottomOf="@id/cache0"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cSpinner"
+        app:layout_constraintTop_toBottomOf="@id/cache0"
+        app:layout_constraintLeft_toRightOf="@id/pSpinner"/>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="20dp"
+        android:src="@drawable/browse_icon"
+        app:backgroundTint="#ffffffff"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="mini"
+        app:pressedTranslationZ="6dp"
+        app:rippleColor="#ffe5e5e5"
+        app:layout_constraintTop_toBottomOf="@id/city_input"
+        app:layout_constraintLeft_toLeftOf="@id/city_input"
+        app:layout_constraintRight_toRightOf="@id/city_input"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/cSpinner"
+        android:visibility="gone"/>
+    <ListView
+        android:id="@+id/resultCast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/result"
+        android:visibility="gone"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="20dp"
+        android:src="@drawable/plus_icon"
+        app:backgroundTint="#ffffffff"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="mini"
+        app:pressedTranslationZ="6dp"
+        app:rippleColor="#ffe5e5e5"
+        app:layout_constraintTop_toBottomOf="@id/reportTime"
+        app:layout_constraintLeft_toLeftOf="@id/reportTime"
+        app:layout_constraintRight_toRightOf="@id/reportTime"
+        android:visibility="gone"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cityResult"
+        app:layout_constraintTop_toBottomOf="@id/pSpinner"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reportTime"
+        app:layout_constraintTop_toBottomOf="@id/resultCast"
+        app:layout_constraintLeft_toLeftOf="@id/resultCast"
+        app:layout_constraintRight_toRightOf="@id/resultCast"
+
+        android:visibility="gone"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cache0"
+
+        app:layout_constraintTop_toBottomOf="@id/temp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cache1"
+
+        app:layout_constraintLeft_toRightOf="@id/cache0"
+        app:layout_constraintTop_toBottomOf="@id/temp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cache2"
+
+        app:layout_constraintLeft_toRightOf="@id/cache1"
+        app:layout_constraintTop_toBottomOf="@id/temp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
