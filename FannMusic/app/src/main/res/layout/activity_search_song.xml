@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:id="@+id/searchLayout"
+   >
+
+
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_marginTop="6dp"
+        android:layout_width="340dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+
+        android:background="@drawable/search_shape"/>
+
+    <ImageButton
+        android:id="@+id/searchButton"
+    style="?android:attr/borderlessButtonStyle"
+    android:layout_marginTop="0dp"
+    android:layout_width="53dp"
+    android:layout_height="50dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/search_icon" />
+
+</LinearLayout>
+    <TextView
+        android:id="@+id/songView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/searchLayout"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/songDownloading"
+        android:gravity="center"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/searchLayout"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/progress"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/songDownloading"
+        style="?android:attr/progressBarStyleHorizontal"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchResult"
+        android:divider="#00000000"
+        android:dividerHeight="18dp"
+        app:layout_constraintTop_toBottomOf="@id/progress"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
